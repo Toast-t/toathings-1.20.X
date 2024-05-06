@@ -1,0 +1,15 @@
+{
+  "item.toathings.example_item": "Example Item",
+  "item.toathings.porcelain": "Porcelain",
+
+  "block.toathings.porcelain_tiles": "Porcelain Tiles",
+  "block.toathings.thingimibob": "Thingamijig",
+  "block.toathings.oak_log_hollow": "Hollow Oak Log",
+  "block.toathings.birch_log_hollow": "Hollow Birch Log",
+  "block.toathings.resinous_polypore": "Resinous Polypore",
+  "block.toathings.pampas_grass": "Pampas Grass",
+  "block.toathings.toggle_lamp": "Glowstone Bulb",
+  "block.toathings.toggle_lamp_red": "Weak Glowstone Bulb",
+
+  "itemgroup.toathings": "Toathings"
+}

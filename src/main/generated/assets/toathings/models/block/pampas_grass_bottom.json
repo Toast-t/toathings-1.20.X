@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "toathings:block/pampas_grass_bottom"
+  }
+}

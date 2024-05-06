@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "toathings:block/resinous_polypore",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "toathings:block/resinous_polypore"
+    },
+    "facing=south": {
+      "model": "toathings:block/resinous_polypore",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "toathings:block/resinous_polypore",
+      "y": 270
+    }
+  }
+}

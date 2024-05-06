@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "toathings:block/birch_log_hollow",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "toathings:block/birch_log_hollow"
+    },
+    "facing=south": {
+      "model": "toathings:block/birch_log_hollow",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "toathings:block/birch_log_hollow",
+      "y": 270
+    }
+  }
+}

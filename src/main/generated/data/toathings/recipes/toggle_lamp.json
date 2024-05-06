@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "PGP",
+    "GRG",
+    "PGP"
+  ],
+  "result": {
+    "item": "toathings:toggle_lamp"
+  },
+  "show_notification": true
+}

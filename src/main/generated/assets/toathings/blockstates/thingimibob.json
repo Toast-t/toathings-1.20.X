@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "toathings:block/thingimibob",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "toathings:block/thingimibob"
+    },
+    "facing=south": {
+      "model": "toathings:block/thingimibob",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "toathings:block/thingimibob",
+      "y": 270
+    }
+  }
+}

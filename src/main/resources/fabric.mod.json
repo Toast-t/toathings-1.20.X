@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "toathings",
+	"version": "${version}",
+	"name": "Toathings",
+	"description": "Collection of additions by Toatd.",
+	"authors": [
+		"Toatd"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/toathings/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.toatd.toathings.Toathings"
+		],
+		"fabric-datagen": [
+			"net.toatd.toathings.ToathingsDataGenerator"
+		],
+		"client": [
+			"net.toatd.toathings.ToathingsClient"
+		]
+	},
+	"mixins": [
+		"toathings.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
