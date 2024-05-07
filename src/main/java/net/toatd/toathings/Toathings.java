@@ -3,8 +3,10 @@ package net.toatd.toathings;
 import net.fabricmc.api.ModInitializer;
 
 import net.toatd.toathings.block.ModBlocks;
+import net.toatd.toathings.block.entity.ModBlockEntities;
 import net.toatd.toathings.item.ModItemGroups;
 import net.toatd.toathings.item.ModItems;
+import net.toatd.toathings.screen.ModScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +27,8 @@ public class Toathings implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandler();
+		//ModRecipes.registerRecipes();
 	}
 }
