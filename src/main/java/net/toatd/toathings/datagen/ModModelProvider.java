@@ -34,6 +34,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.OAK_LOG_HOLLOW);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BIRCH_LOG_HOLLOW);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.RESINOUS_POLYPORE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.JUICER);
 
         registerPampasGrass(blockStateModelGenerator);
     }
@@ -42,5 +43,10 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.EXAMPLE_ITEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PORCELAIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_JUICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CARROT_JUICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PUMPKIN_JUICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MELON_JUICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KELP_JUICE, Models.GENERATED);
     }
 }

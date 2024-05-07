@@ -13,10 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.toatd.toathings.Toathings;
-import net.toatd.toathings.block.custom.HollowLogBlock;
-import net.toatd.toathings.block.custom.ThingimibobBlock;
-import net.toatd.toathings.block.custom.ToggleableLampBlock;
-import net.toatd.toathings.block.custom.WallPlantBlock;
+import net.toatd.toathings.block.custom.*;
 
 import java.util.function.ToIntFunction;
 
@@ -38,6 +35,7 @@ public class ModBlocks {
             new ToggleableLampBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(ModBlocks.createLightLevelFromLitBlockState(15))));
     public static final Block TOGGLE_LAMP_RED = registerBlock("toggle_lamp_red",
             new ToggleableLampBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(ModBlocks.createLightLevelFromLitBlockState(8))));
+    public static final Block JUICER = registerBlock("juicer", new JuicerBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);

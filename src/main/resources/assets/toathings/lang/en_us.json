@@ -1,6 +1,11 @@
 {
   "item.toathings.example_item": "Example Item",
   "item.toathings.porcelain": "Porcelain",
+  "item.toathings.apple_juice": "Apple Juice",
+  "item.toathings.carrot_juice": "Carrot Juice",
+  "item.toathings.pumpkin_juice": "Pumpkin Juice",
+  "item.toathings.melon_juice": "Melon Juice",
+  "item.toathings.kelp_juice": "Kelp Juice",
 
   "block.toathings.porcelain_tiles": "Porcelain Tiles",
   "block.toathings.thingimibob": "Thingamijig",
@@ -10,6 +15,13 @@
   "block.toathings.pampas_grass": "Pampas Grass",
   "block.toathings.toggle_lamp": "Glowstone Bulb",
   "block.toathings.toggle_lamp_red": "Weak Glowstone Bulb",
+  "block.toathings.juicer": "Juicer",
+
+  "tooltip.item.toathings.melon_juice.tooltip": "§9Absorption (00:30)",
+  "tooltip.item.toathings.apple_juice.tooltip": "§9Health Boost (00:30)",
+  "tooltip.item.toathings.carrot_juice.tooltip": "§9Haste (00:30)",
+  "tooltip.item.toathings.pumpkin_juice.tooltip": "§9Resistance (00:30)",
+  "tooltip.item.toathings.kelp_juice.tooltip": "§9Dolphin's Grace (00:30)",
 
   "itemgroup.toathings": "Toathings"
 }
