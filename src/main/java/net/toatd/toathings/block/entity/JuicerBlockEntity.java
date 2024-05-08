@@ -7,7 +7,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -19,7 +18,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.toatd.toathings.item.ModItems;
+import net.toatd.toathings.recipe.JuicingRecipe;
 import net.toatd.toathings.screen.JuicerScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
@@ -115,12 +114,14 @@ public class JuicerBlockEntity extends BlockEntity implements ExtendedScreenHand
     }
 
     private void craftItem() {
+        Optional<JuicingRecipe> recipe = getCurrentRecipe();
+
         this.removeStack(FOOD_ITEM_SLOT,1);
         this.removeStack(MATERIAL_ITEM_SLOT,1);
         this.removeStack(GLASS_BOTTLE_SLOT,1);
-        ItemStack result = new ItemStack(ModItems.APPLE_JUICE);
 
-        this.setStack(OUPUT_SLOT, new ItemStack(result.getItem(),getStack(OUPUT_SLOT).getCount() + result.getCount()));
+        this.setStack(OUPUT_SLOT, new ItemStack(recipe.get().getOutput(null).getItem(),
+                this.getStack(OUPUT_SLOT).getCount() + 1));
     }
 
     private void resetProgress() {
@@ -136,20 +137,37 @@ public class JuicerBlockEntity extends BlockEntity implements ExtendedScreenHand
     }
 
     private boolean hasRecipe() {
-        ItemStack result = new ItemStack(ModItems.APPLE_JUICE);
-        boolean hasFood = getStack(FOOD_ITEM_SLOT).getItem() == Items.APPLE;
-        boolean hasMaterial = getStack(MATERIAL_ITEM_SLOT).getItem() == Items.HONEYCOMB;
-        boolean hasBottle = getStack(GLASS_BOTTLE_SLOT).getItem() == Items.GLASS_BOTTLE;
+        Optional<JuicingRecipe> recipe = getCurrentRecipe();
 
-        return hasFood && hasMaterial && hasBottle
-                && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
+        if (recipe.isEmpty()) return false;
+        ItemStack output = recipe.get().getOutput(null);
+        return canInsertAmountIntoOutputSlot(output.getCount())
+                && canInsertItemIntoOutputSlot(output)
+                && hasBottleItem();
     }
 
-    private boolean canInsertAmountIntoOutputSlot(ItemStack result) {
-        return this.getStack(OUPUT_SLOT).getCount() + result.getCount() <= getStack(OUPUT_SLOT).getMaxCount();
+    private boolean hasBottleItem() {
+        if(this.getStack(GLASS_BOTTLE_SLOT).isEmpty()){
+            return false;
+        }
+        return this.getStack(GLASS_BOTTLE_SLOT).getItem() == Items.GLASS_BOTTLE;
     }
 
-    private boolean canInsertItemIntoOutputSlot(Item item) {
-        return this.getStack(OUPUT_SLOT).getItem() == item || this.getStack(OUPUT_SLOT).isEmpty();
+    private Optional<JuicingRecipe> getCurrentRecipe() {
+        SimpleInventory simpleInventory = new SimpleInventory(this.size());
+        for(int i = 0; i < this.size(); i++){
+           simpleInventory.setStack(i, this.getStack(i));
+        }
+
+        return this.getWorld().getRecipeManager().getFirstMatch(JuicingRecipe.Type.INSTANCE,
+                simpleInventory, this.getWorld());
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+        return this.getStack(OUPUT_SLOT).getMaxCount() >= this.getStack(OUPUT_SLOT).getCount() + count;
+    }
+
+    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
+        return this.getStack(OUPUT_SLOT).getItem() == output.getItem() || this.getStack(OUPUT_SLOT).isEmpty();
     }
 }

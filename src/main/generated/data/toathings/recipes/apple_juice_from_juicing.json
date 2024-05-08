@@ -1,0 +1,11 @@
+{
+  "type": "toathings:juicing",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "output": {
+    "item": "toathings:apple_juice"
+  }
+}

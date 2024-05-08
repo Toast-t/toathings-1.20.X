@@ -13,6 +13,7 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.toatd.toathings.block.ModBlocks;
+import net.toatd.toathings.datagen.recipe.JuicingRecipeBuilder;
 import net.toatd.toathings.item.ModItems;
 import net.minecraft.util.Identifier;
 
@@ -45,5 +46,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('P', ItemTags.PLANKS)
                 .criterion(hasItem(Items.GLOWSTONE_DUST),conditionsFromItem(Items.GLOWSTONE_DUST))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.TOGGLE_LAMP)));
+
+        new JuicingRecipeBuilder(Items.APPLE, ModItems.APPLE_JUICE,1)
+                .offerTo(exporter);
     }
 }

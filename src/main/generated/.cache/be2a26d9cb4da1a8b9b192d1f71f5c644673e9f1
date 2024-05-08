@@ -1,8 +1,10 @@
-// 1.20	2024-05-07T03:51:26.1660323	Toathings/Recipes
+// 1.20	2024-05-07T12:13:23.0879792	Toathings/Recipes
 96a348fb5855e01ff075207b77b0332d301a1728 data\toathings\advancements\recipes\redstone\toggle_lamp.json
 73d6162b9fe2f8afbf906a71f6c16ce3a3c86811 data\toathings\recipes\porcelain_from_blasting_clay_ball.json
 6a2521d14e4e28855d6914496b5b305f06b05562 data\toathings\recipes\toggle_lamp.json
+d103fe1f2d98b3590aa0b1f074aec58f079382ca data\toathings\recipes\apple_juice_from_juicing.json
 6c3a4b88aede69dbb76abd412ad477cd1917d606 data\toathings\recipes\toggle_lamp_red.json
+65a543f01a31d2900116f93a44afdecf564a5851 data\toathings\advancements\recipes\apple_juice.json
 a3eba49238494cd1145cf47f64f49517b5331dbb data\toathings\advancements\recipes\building_blocks\porcelain_tiles.json
 06976cf9fcd8f853ed4d92af3bae6bf9bafab097 data\toathings\advancements\recipes\redstone\toggle_lamp_red.json
 effc81baaec5ebe42e588502a2d0aa9cb131baa3 data\toathings\advancements\recipes\misc\porcelain_from_blasting_clay_ball.json
