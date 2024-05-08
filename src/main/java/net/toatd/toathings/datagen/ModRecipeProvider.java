@@ -36,6 +36,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.TOGGLE_LAMP)
                 .criterion(hasItem(Items.GLOWSTONE_DUST),conditionsFromItem(Items.GLOWSTONE_DUST))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.TOGGLE_LAMP_RED)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,ModItems.PUMPKIN_SLICE,4)
+                .input(Items.PUMPKIN)
+                .criterion(hasItem(Items.PUMPKIN),conditionsFromItem(Items.PUMPKIN))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PUMPKIN_SLICE)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,Items.MELON_SLICE,4)
+                .input(Items.MELON)
+                .criterion(hasItem(Items.MELON),conditionsFromItem(Items.MELON))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.MELON_SLICE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE,ModBlocks.TOGGLE_LAMP,1)
                 .pattern("PGP")
@@ -46,8 +54,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('P', ItemTags.PLANKS)
                 .criterion(hasItem(Items.GLOWSTONE_DUST),conditionsFromItem(Items.GLOWSTONE_DUST))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.TOGGLE_LAMP)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS,ModBlocks.JUICER,1)
+                .pattern("PVP")
+                .pattern("PSP")
+                .pattern("PRP")
+                .input('R',Items.REDSTONE)
+                .input('V', Items.PISTON)
+                .input('P', ModItems.PORCELAIN)
+                .input('S', Items.IRON_BARS)
+                .criterion(hasItem(ModItems.PORCELAIN),conditionsFromItem(ModItems.PORCELAIN))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.JUICER)));
 
-        new JuicingRecipeBuilder(Items.APPLE, ModItems.APPLE_JUICE,1)
+        new JuicingRecipeBuilder(Items.APPLE, Items.HONEYCOMB, ModItems.APPLE_JUICE,1)
+                .offerTo(exporter);
+
+        new JuicingRecipeBuilder(Items.CARROT, Items.SUGAR, ModItems.CARROT_JUICE,1)
+                .offerTo(exporter);
+
+        new JuicingRecipeBuilder(ModItems.PUMPKIN_SLICE, Items.WHEAT, ModItems.PUMPKIN_JUICE,1)
+                .offerTo(exporter);
+
+        new JuicingRecipeBuilder(Items.MELON_SLICE, Items.NETHER_WART, ModItems.MELON_JUICE,1)
+                .offerTo(exporter);
+
+        new JuicingRecipeBuilder(Items.KELP, Items.SCUTE, ModItems.KELP_JUICE,1)
                 .offerTo(exporter);
     }
 }

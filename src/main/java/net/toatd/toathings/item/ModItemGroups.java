@@ -17,6 +17,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModBlocks.OAK_LOG_HOLLOW)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.EXAMPLE_ITEM);
+                        entries.add(ModItems.PUMPKIN_JUICE);
 
                         //PORCELAIN
                         entries.add(ModItems.PORCELAIN);

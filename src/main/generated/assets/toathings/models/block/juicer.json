@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/iron_block",
+    "east": "toathings:block/juicer_side",
+    "north": "toathings:block/juicer_front",
+    "particle": "toathings:block/juicer_front",
+    "south": "toathings:block/juicer_front",
+    "up": "toathings:block/juicer_top",
+    "west": "toathings:block/juicer_side"
+  }
+}

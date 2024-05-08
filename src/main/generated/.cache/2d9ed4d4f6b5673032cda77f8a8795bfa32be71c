@@ -1,6 +1,7 @@
-// 1.20	2024-05-07T12:13:23.0929784	Toathings/Block Loot Tables
+// 1.20	2024-05-08T04:46:52.7442311	Toathings/Block Loot Tables
 08ef5ed0f478af17dc924d2995308c42e05ebd38 data\toathings\loot_tables\blocks\toggle_lamp.json
 518b307cae04684d2257250daef3d846d62e25d4 data\toathings\loot_tables\blocks\birch_log_hollow.json
+a273c8f5b9bc65659881a001c586619a9987f165 data\toathings\loot_tables\blocks\juicer.json
 8e279150b6ec5ee1c6d88758179619f5b9f08110 data\toathings\loot_tables\blocks\oak_log_hollow.json
 adcadaa992b4d190fad9a2884cb6e49c25618cff data\toathings\loot_tables\blocks\toggle_lamp_red.json
 b747e08153e30f0959fed2a3864db2a5521b22dc data\toathings\loot_tables\blocks\resinous_polypore.json

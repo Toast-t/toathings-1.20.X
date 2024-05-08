@@ -1,0 +1,14 @@
+{
+  "type": "toathings:juicing",
+  "ingredients": [
+    {
+      "item": "toathings:pumpkin_slice"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "output": {
+    "item": "toathings:pumpkin_juice"
+  }
+}

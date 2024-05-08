@@ -1,0 +1,14 @@
+{
+  "type": "toathings:juicing",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:scute"
+    }
+  ],
+  "output": {
+    "item": "toathings:kelp_juice"
+  }
+}

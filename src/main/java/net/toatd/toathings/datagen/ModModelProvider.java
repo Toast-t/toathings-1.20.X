@@ -2,11 +2,9 @@ package net.toatd.toathings.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.ModelIds;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TextureMap;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.toatd.toathings.block.ModBlocks;
 import net.toatd.toathings.item.ModItems;
@@ -34,7 +32,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.OAK_LOG_HOLLOW);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BIRCH_LOG_HOLLOW);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.RESINOUS_POLYPORE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.JUICER);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.JUICER, Blocks.IRON_BLOCK,
+                TextureMap::frontTopSide);
 
         registerPampasGrass(blockStateModelGenerator);
     }
@@ -43,6 +42,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.EXAMPLE_ITEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PORCELAIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PUMPKIN_SLICE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.APPLE_JUICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CARROT_JUICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PUMPKIN_JUICE, Models.GENERATED);

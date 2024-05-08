@@ -1,0 +1,14 @@
+{
+  "type": "toathings:juicing",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "item": "toathings:carrot_juice"
+  }
+}

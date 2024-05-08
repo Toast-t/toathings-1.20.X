@@ -30,5 +30,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TOGGLE_LAMP);
         addDrop(ModBlocks.TOGGLE_LAMP_RED);
         addDrop(ModBlocks.RESINOUS_POLYPORE, shearDrop(ModBlocks.RESINOUS_POLYPORE));
+        addDrop(ModBlocks.JUICER);
     }
 }

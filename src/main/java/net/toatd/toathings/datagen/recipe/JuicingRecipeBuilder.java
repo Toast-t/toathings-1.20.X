@@ -22,12 +22,14 @@ import java.util.function.Consumer;
 
 public class JuicingRecipeBuilder implements CraftingRecipeJsonBuilder {
     private final Item result;
-    private final Ingredient ingredient;
+    private final Ingredient food_ingredient;
+    private final Ingredient material_ingredient;
     private final int count;
     private final Advancement.Builder advancement = Advancement.Builder.create();
 
-    public JuicingRecipeBuilder(ItemConvertible ingredient, ItemConvertible result, int count) {
-        this.ingredient = Ingredient.ofItems(ingredient);
+    public JuicingRecipeBuilder(ItemConvertible food_ingredient, ItemConvertible material_ingredient, ItemConvertible result, int count) {
+        this.food_ingredient = Ingredient.ofItems(food_ingredient);
+        this.material_ingredient = Ingredient.ofItems(material_ingredient);
         this.result = result.asItem();
         this.count = count;
     }
@@ -54,7 +56,7 @@ public class JuicingRecipeBuilder implements CraftingRecipeJsonBuilder {
                 .criterion("has_the_recipe", RecipeUnlockedCriterion.create(recipeId))
                 .rewards(AdvancementRewards.Builder.recipe(recipeId));
 
-        exporter.accept(new JsonBuilder(recipeId, this.result, this.count, this.ingredient,
+        exporter.accept(new JsonBuilder(recipeId, this.result, this.count, this.food_ingredient, this.material_ingredient,
                 this.advancement, new Identifier(recipeId.getNamespace(), "recipes/"
                 + recipeId.getPath())));
     }
@@ -62,16 +64,18 @@ public class JuicingRecipeBuilder implements CraftingRecipeJsonBuilder {
     public static class JsonBuilder implements RecipeJsonProvider {
         private final Identifier id;
         private final Item result;
-        private final Ingredient ingredient;
+        private final Ingredient food_ingredient;
+        private final Ingredient material_ingredient;
         private final int count;
         private final Advancement.Builder advancement;
         private final Identifier advancementId;
 
-        public JsonBuilder(Identifier id, Item result, int count, Ingredient ingredient,
+        public JsonBuilder(Identifier id, Item result, int count, Ingredient food_ingredient, Ingredient material_ingredient,
                            Advancement.Builder advancement, Identifier advancementId) {
             this.id = id;
             this.result = result;
-            this.ingredient = ingredient;
+            this.food_ingredient = food_ingredient;
+            this.material_ingredient = material_ingredient;
             this.count = count;
             this.advancement = advancement;
             this.advancementId = advancementId;
@@ -80,7 +84,8 @@ public class JuicingRecipeBuilder implements CraftingRecipeJsonBuilder {
         @Override
         public void serialize(JsonObject json) {
             JsonArray jsonarray = new JsonArray();
-            jsonarray.add(ingredient.toJson());
+            jsonarray.add(food_ingredient.toJson());
+            jsonarray.add(material_ingredient.toJson());
 
             json.add("ingredients", jsonarray);
             JsonObject jsonobject = new JsonObject();

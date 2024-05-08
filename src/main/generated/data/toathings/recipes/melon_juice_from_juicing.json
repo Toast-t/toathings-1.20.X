@@ -1,0 +1,14 @@
+{
+  "type": "toathings:juicing",
+  "ingredients": [
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    }
+  ],
+  "output": {
+    "item": "toathings:melon_juice"
+  }
+}

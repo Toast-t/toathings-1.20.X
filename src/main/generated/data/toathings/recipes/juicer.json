@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "toathings:porcelain"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:iron_bars"
+    },
+    "V": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "PVP",
+    "PSP",
+    "PRP"
+  ],
+  "result": {
+    "item": "toathings:juicer"
+  },
+  "show_notification": true
+}

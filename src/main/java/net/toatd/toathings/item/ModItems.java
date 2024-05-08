@@ -1,9 +1,7 @@
 package net.toatd.toathings.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.HoneyBottleItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -14,6 +12,10 @@ public class ModItems {
 
     public static final Item EXAMPLE_ITEM = registerItem("example_item", new Item(new FabricItemSettings()));
     public static final Item PORCELAIN = registerItem("porcelain", new Item(new FabricItemSettings()));
+    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", new Item(new FabricItemSettings()
+            .food(FoodComponents.MELON_SLICE)));
+
+
     public static final Item APPLE_JUICE = registerItem("apple_juice", new JuiceItem(new FabricItemSettings()
             .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.APPLE_JUICE).maxCount(16)));
     public static final Item CARROT_JUICE = registerItem("carrot_juice", new JuiceItem(new FabricItemSettings()

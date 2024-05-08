@@ -3,6 +3,9 @@
   "ingredients": [
     {
       "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:honeycomb"
     }
   ],
   "output": {
