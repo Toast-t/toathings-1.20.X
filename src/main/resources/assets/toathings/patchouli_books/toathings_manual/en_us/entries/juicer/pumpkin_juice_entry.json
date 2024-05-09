@@ -1,0 +1,14 @@
+{
+  "name": "Pumpkin Juice",
+  "icon": "toathings:pumpkin_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "toathings:pumpkin_slice",
+      "bottom_item": "minecraft:wheat",
+      "result_item": "toathings:pumpkin_juice",
+      "text": "$(l)Pumpkin Juice$() provides Resistance I for 30 seconds. This reduces the damage taken from all sources."
+    }
+  ]
+}

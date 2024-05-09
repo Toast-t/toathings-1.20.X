@@ -1,0 +1,15 @@
+{
+  "name": "Porcelain Blocks",
+  "icon": "toathings:porcelain_tiles",
+  "category": "toathings:block_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Porcelain can make multiple decorational Building Blocks such as Porcelain Tiles and Porcelain Blocks."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toathings:porcelain_tiles"
+    }
+  ]
+}

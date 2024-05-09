@@ -1,0 +1,31 @@
+{
+  "name": "Plants",
+  "icon": "toathings:resinous_polypore",
+  "category": "toathings:birch_forest_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Toathings$() adds multiple new plants to Birch Forests, namely, Pampas Grass and Resinous Polypores.$(br2)$(l)$(n)Pampas Grass$()$(br)Pampas Grass is a Tall Plant with a long stem that ends in a fluffy bud at the top. It grows anywhere that normal Tall Flowers grow, with the obvious exception of only growing in Birch Forests."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "toathings:textures/gui/entries/pampas_grass_image.png"
+      ],
+      "border": true,
+      "text": "Pampas Grass commonly grows in small clusters similar to their real world counterpart."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)$(n)Resinous Polypore$()$(br)Resinous Polypores are a unique species of mushrooms that grow on Logs. These can be found in Birch Forests growing on the side of trees and even fallen logs.$(br2)These mushrooms can only be placed on the side of blocks and can only be harvested with shears."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "toathings:textures/gui/entries/resinous_polypore_image.png"
+      ],
+      "border": true,
+      "text": "$(o)Resinous Polypores growing on trees."
+    }
+  ]
+}

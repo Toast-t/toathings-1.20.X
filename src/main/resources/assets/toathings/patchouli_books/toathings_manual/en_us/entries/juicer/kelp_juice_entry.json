@@ -1,0 +1,14 @@
+{
+  "name": "Kelp Juice",
+  "icon": "toathings:kelp_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "minecraft:kelp",
+      "bottom_item": "minecraft:scute",
+      "result_item": "toathings:kelp_juice",
+      "text": "$(l)Kelp Juice$() provides Dolphin's Grace I for 30 seconds. This increases your swimming speed greatly."
+    }
+  ]
+}

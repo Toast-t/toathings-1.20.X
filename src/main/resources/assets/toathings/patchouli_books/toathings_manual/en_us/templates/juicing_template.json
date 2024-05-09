@@ -1,0 +1,55 @@
+{
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "Juicing Recipe",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "patchouli:separator",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "patchouli:image",
+      "image": "toathings:textures/gui/entries/juicing_template.png",
+      "width": 64,
+      "height": 64,
+      "x": 40,
+      "y": 35
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#top_item",
+      "framed": true,
+      "x": 20,
+      "y": 30
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#bottom_item",
+      "framed": true,
+      "x": 20,
+      "y": 60
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#result_item",
+      "framed": true,
+      "x": 80,
+      "y": 45
+    },
+    {
+      "type": "patchouli:separator",
+      "x": -1,
+      "y": 90
+    },
+    {
+      "type": "patchouli:text",
+      "text": "#text",
+      "x": 0,
+      "y": 100
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Apple Juice",
+  "icon": "toathings:apple_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "minecraft:apple",
+      "bottom_item": "minecraft:honeycomb",
+      "result_item": "toathings:apple_juice",
+      "text": "$(l)Apple Juice$() provides Health Boost I for 30 seconds. This gives you 2 extra hearts on your healthbar."
+    }
+  ]
+}

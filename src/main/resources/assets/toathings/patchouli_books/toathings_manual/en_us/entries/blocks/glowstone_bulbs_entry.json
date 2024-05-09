@@ -1,0 +1,18 @@
+{
+  "name": "Glowstone Bulbs",
+  "icon": "toathings:toggle_lamp",
+  "category": "toathings:block_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "toathings:toggle_lamp",
+      "text": "The Glowstone Bulb is a Functional Block that toggles on and off a light source when right clicked. This block does not require Redstone and constantly emits light until toggled off.$(br2)Additionally, the Weak Glowstone Bulb emits about half of the amount of light that a normal Glowstone Bulb does."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toathings:toggle_lamp",
+      "recipe2": "toathings:toggle_lamp_red",
+      "title": "Crafting Recipe"
+    }
+  ]
+}

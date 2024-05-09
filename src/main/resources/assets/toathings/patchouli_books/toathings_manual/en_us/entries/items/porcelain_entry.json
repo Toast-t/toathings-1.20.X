@@ -1,0 +1,19 @@
+{
+  "name": "Porcelain",
+  "icon": "toathings:porcelain",
+  "category": "toathings:item_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "toathings:porcelain"
+      },
+      "link_recipe": true,
+      "text": "Porcelain is an item important for multiple crafting recipes in Toathings. It can be created by smelting clay at a high temperature in a blast furnace. A normal furnace is too weak to create porcelain."
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "toathings:porcelain"
+    }
+  ]
+}

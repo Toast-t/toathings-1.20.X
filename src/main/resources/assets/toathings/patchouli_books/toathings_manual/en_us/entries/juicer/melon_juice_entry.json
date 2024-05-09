@@ -1,0 +1,14 @@
+{
+  "name": "Melon Juice",
+  "icon": "toathings:melon_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "minecraft:melon_slice",
+      "bottom_item": "minecraft:nether_wart",
+      "result_item": "toathings:melon_juice",
+      "text": "$(l)Melon Juice$() provides Absorption I for 30 seconds. This gives you 2 temporary gold hearts on your healthbar."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Carrot Juice",
+  "icon": "toathings:carrot_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "minecraft:carrot",
+      "bottom_item": "minecraft:sugar",
+      "result_item": "toathings:carrot_juice",
+      "text": "$(l)Carrot Juice$() provides Haste I for 30 seconds. This reduces the time it takes to break blocks slightly."
+    }
+  ]
+}

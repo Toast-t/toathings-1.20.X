@@ -11,13 +11,13 @@ import net.toatd.toathings.Toathings;
 import net.toatd.toathings.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup SERAPHIC_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup TOATHINGS_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Toathings.MOD_ID,"toathings"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.toathings"))
                     .icon(() -> new ItemStack(ModBlocks.OAK_LOG_HOLLOW)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.EXAMPLE_ITEM);
-                        entries.add(ModItems.PUMPKIN_JUICE);
+                        entries.add(ModItems.PUMPKIN_SLICE);
 
                         //PORCELAIN
                         entries.add(ModItems.PORCELAIN);

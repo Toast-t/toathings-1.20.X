@@ -1,0 +1,5 @@
+{
+  "name": "Juicing!",
+  "description": "$(l)Juicing$() is a new process that allows you to create new drinkable items called Juices. Juices provide temporary status effects that are normally impossible to get from normal potions, with the downside of only lasting 30 seconds.",
+  "icon": "toathings:apple_juice"
+}

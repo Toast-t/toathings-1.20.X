@@ -1,0 +1,5 @@
+{
+  "name": "Items",
+  "description": "$(o)Toathings$() has many items that are important for crafting and other recipes. Some of these items may be functional.",
+  "icon": "toathings:porcelain"
+}

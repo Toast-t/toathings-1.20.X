@@ -1,0 +1,5 @@
+{
+  "name": "Blocks",
+  "description": "$(o)Toathings$() adds multiple new block for the player to build and experiment with. Some of these block are functional and can be interacted with.",
+  "icon": "toathings:toggle_lamp"
+}

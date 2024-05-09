@@ -1,0 +1,20 @@
+{
+  "name": "Hollow Logs",
+  "icon": "toathings:oak_log_hollow",
+  "category": "toathings:block_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "toathings:oak_log_hollow",
+      "text": "Hollow logs only spawn naturally, however they can be picked up and placed elsewhere. Hollow Oak Logs are currently unobtainable."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "toathings:textures/gui/entries/hollow_log_blocks_image.png"
+      ],
+      "border": true,
+      "text": "$(o)Oak and Birch hollow logs."
+    }
+  ]
+}

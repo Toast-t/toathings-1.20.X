@@ -1,0 +1,19 @@
+{
+  "name": "Juicer",
+  "icon": "toathings:juicer",
+  "category": "toathings:juicer_category",
+  "priority": true,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "toathings:juicer",
+      "text": "The Juicer is a new Functional Block that allows you to create Juices from a Food Item and its matching Material Item if the machine is supplied with Glass Bottles. The Juicer does not require any power or fuel and will create Juices as long as all required Items are present."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toathings:juicer",
+      "title": "Crafting Recipe",
+      "text": "The top left slot of a juicer is the \"Food Item\" slot, the bottom left slot is the \"Material\" slot, and the far right slot is the Glass Bottle slot."
+    }
+  ]
+}

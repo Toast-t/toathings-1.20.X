@@ -1,0 +1,9 @@
+{
+  "name": "Toathings User Manual",
+  "landing_text": " A How-to guide for all things Toathings!",
+  "version": 0.1,
+  "creative_tab": "toathings:toathings",
+  "use_resource_pack": true,
+  "model": "patchouli:book_green",
+  "show_progress": false
+}

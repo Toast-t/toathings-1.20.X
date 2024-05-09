@@ -1,0 +1,19 @@
+{
+  "name": "Generation",
+  "icon": "toathings:birch_log_hollow",
+  "category": "toathings:birch_forest_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Toathings$() adds new naturally generating features to Birch Forests to add liveliness the biome.$(br2)$(l)$(n)Fallen Birch Trees$()$(br)When exploring Birch Forests, you may occasionally discover fallen trees in the form of hollow birch logs. These fallen trees are commonly covered in moss and mushrooms"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "toathings:textures/gui/entries/hollow_log_image.png"
+      ],
+      "border": true,
+      "text": "$(o)A Fallen Birch tree made out of hollow log blocks."
+    }
+  ]
+}
