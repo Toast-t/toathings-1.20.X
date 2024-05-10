@@ -42,6 +42,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PUMPKIN_JUICE);
                         entries.add(ModItems.MELON_JUICE);
                         entries.add(ModItems.KELP_JUICE);
+                        entries.add(ModItems.GOLDEN_JUICE);
 
                     }).build());
     public static void registerItemGroups(){

@@ -6,6 +6,7 @@
   "item.toathings.pumpkin_juice": "Pumpkin Juice",
   "item.toathings.melon_juice": "Melon Juice",
   "item.toathings.kelp_juice": "Kelp Juice",
+  "item.toathings.golden_juice": "Enchanted Golden Juice",
   "item.toathings.pumpkin_slice": "Pumpkin Slice",
 
   "block.toathings.porcelain_tiles": "Porcelain Tiles",
@@ -23,6 +24,7 @@
   "tooltip.item.toathings.carrot_juice.tooltip": "§9Haste (00:30)",
   "tooltip.item.toathings.pumpkin_juice.tooltip": "§9Resistance (00:30)",
   "tooltip.item.toathings.kelp_juice.tooltip": "§9Dolphin's Grace (00:30)",
+  "tooltip.item.toathings.golden_juice.tooltip": "§9All Juice Effects II (01:00)",
 
   "itemgroup.toathings": "Toathings"
 }

@@ -18,15 +18,18 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.toatd.toathings.Toathings;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class JuiceItem extends Item {
     private static final int MAX_USE_TIME = 40;
+    private final boolean glint;
 
-    public JuiceItem(Settings settings) {
+    public JuiceItem(Settings settings, Boolean glint) {
         super(settings);
+        this.glint = glint;
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
@@ -69,6 +72,11 @@ public class JuiceItem extends Item {
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return ItemUsage.consumeHeldItem(world, user, hand);
+    }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return this.glint;
     }
 
     @Override

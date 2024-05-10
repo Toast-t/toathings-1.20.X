@@ -1,0 +1,18 @@
+{
+  "name": "Enchanted Golden Juice",
+  "icon": "toathings:golden_juice",
+  "category": "toathings:juicer_category",
+  "pages": [
+    {
+      "type": "toathings:juicing_template",
+      "top_item": "minecraft:golden_apple",
+      "bottom_item": "minecraft:experience_bottle",
+      "result_item": "toathings:golden_juice",
+      "text": "$(l)Enchanted Golden Juice$() provides all of the other Juice Effects II for 1 minute. This gives you 4 extra hearts on your healthbar, 4 temporary"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Golden Hearts, greatly increased swimming and mining speed, and provides significant resistance to damage from all sources."
+    }
+  ]
+}

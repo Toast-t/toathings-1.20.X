@@ -79,5 +79,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         new JuicingRecipeBuilder(Items.KELP, Items.SCUTE, ModItems.KELP_JUICE,1)
                 .offerTo(exporter);
+
+        new JuicingRecipeBuilder(Items.GOLDEN_APPLE, Items.EXPERIENCE_BOTTLE, ModItems.GOLDEN_JUICE,1)
+                .offerTo(exporter);
     }
 }

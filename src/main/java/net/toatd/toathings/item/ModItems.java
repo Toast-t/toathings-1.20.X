@@ -5,6 +5,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.toatd.toathings.Toathings;
 import net.toatd.toathings.item.custom.JuiceItem;
 
@@ -17,15 +18,17 @@ public class ModItems {
 
 
     public static final Item APPLE_JUICE = registerItem("apple_juice", new JuiceItem(new FabricItemSettings()
-            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.APPLE_JUICE).maxCount(16)));
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.APPLE_JUICE).maxCount(16),false));
     public static final Item CARROT_JUICE = registerItem("carrot_juice", new JuiceItem(new FabricItemSettings()
-            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.CARROT_JUICE).maxCount(16)));
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.CARROT_JUICE).maxCount(16),false));
     public static final Item PUMPKIN_JUICE = registerItem("pumpkin_juice", new JuiceItem(new FabricItemSettings()
-            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.PUMPKIN_JUICE).maxCount(16)));
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.PUMPKIN_JUICE).maxCount(16),false));
     public static final Item MELON_JUICE = registerItem("melon_juice", new JuiceItem(new FabricItemSettings()
-            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.MELON_JUICE).maxCount(16)));
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.MELON_JUICE).maxCount(16),false));
     public static final Item KELP_JUICE = registerItem("kelp_juice", new JuiceItem(new FabricItemSettings()
-            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.KELP_JUICE).maxCount(16)));
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.KELP_JUICE).maxCount(16),false));
+    public static final Item GOLDEN_JUICE = registerItem("golden_juice", new JuiceItem(new FabricItemSettings()
+            .recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.GOLDEN_JUICE).maxCount(16).rarity(Rarity.EPIC),true));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Toathings.MOD_ID,name),item);

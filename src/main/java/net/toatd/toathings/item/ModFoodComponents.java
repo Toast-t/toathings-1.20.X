@@ -24,4 +24,14 @@ public class ModFoodComponents {
     public static final FoodComponent KELP_JUICE = new FoodComponent.Builder()
             .hunger(5).saturationModifier(5f)
             .statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,600),1f).build();
+
+    public static final FoodComponent GOLDEN_JUICE = new FoodComponent.Builder()
+            .hunger(5).saturationModifier(5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,1200,1),1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200,1),1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,1200,1),1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,1200,1),1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,1200,1),1f)
+            .build();
+
 }
