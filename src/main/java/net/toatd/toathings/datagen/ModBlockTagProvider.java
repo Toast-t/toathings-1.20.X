@@ -23,6 +23,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.OAK_LOG_HOLLOW);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(ModBlocks.RESINOUS_POLYPORE);
+                .add(ModBlocks.RESINOUS_POLYPORE)
+                .add(ModBlocks.PINK_WILDFLOWERS)
+                .add(ModBlocks.PURPLE_WILDFLOWERS)
+                .add(ModBlocks.BLUE_WILDFLOWERS);
     }
 }

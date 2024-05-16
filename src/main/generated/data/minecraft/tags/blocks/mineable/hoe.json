@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "toathings:resinous_polypore"
+    "toathings:resinous_polypore",
+    "toathings:pink_wildflowers",
+    "toathings:purple_wildflowers",
+    "toathings:blue_wildflowers"
   ]
 }
