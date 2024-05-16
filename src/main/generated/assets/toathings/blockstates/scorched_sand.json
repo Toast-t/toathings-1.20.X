@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "toathings:block/scorched_sand"
+      },
+      {
+        "model": "toathings:block/scorched_sand",
+        "y": 90
+      },
+      {
+        "model": "toathings:block/scorched_sand",
+        "y": 180
+      },
+      {
+        "model": "toathings:block/scorched_sand",
+        "y": 270
+      }
+    ]
+  }
+}

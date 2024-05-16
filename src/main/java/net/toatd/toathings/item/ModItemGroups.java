@@ -19,19 +19,21 @@ public class ModItemGroups {
                         entries.add(ModItems.EXAMPLE_ITEM);
                         entries.add(ModItems.PUMPKIN_SLICE);
 
-                        //PORCELAIN
+                        //BLOCK
                         entries.add(ModItems.PORCELAIN);
                         entries.add(ModBlocks.PORCELAIN_TILES);
-
-                        //HOLLOW LOGS
                         entries.add(ModBlocks.OAK_LOG_HOLLOW);
                         entries.add(ModBlocks.BIRCH_LOG_HOLLOW);
+                        entries.add(ModBlocks.SCORCHED_SAND);
 
-                        //PLANTS
+                        //PLANT
                         entries.add(ModBlocks.RESINOUS_POLYPORE);
                         entries.add(ModBlocks.PAMPAS_GRASS);
+                        entries.add(ModBlocks.PURPLE_WILDFLOWERS);
+                        entries.add(ModBlocks.PINK_WILDFLOWERS);
+                        entries.add(ModBlocks.BLUE_WILDFLOWERS);
 
-                        //FUNCTIONAL BLOCKS
+                        //FUNCTIONAL BLOCK
                         entries.add(ModBlocks.TOGGLE_LAMP);
                         entries.add(ModBlocks.TOGGLE_LAMP_RED);
                         entries.add(ModBlocks.JUICER);

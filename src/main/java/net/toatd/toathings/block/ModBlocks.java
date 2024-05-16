@@ -2,14 +2,13 @@ package net.toatd.toathings.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.TallFlowerBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.toatd.toathings.Toathings;
@@ -31,11 +30,21 @@ public class ModBlocks {
             new WallPlantBlock(FabricBlockSettings.copyOf(Blocks.VINE).nonOpaque().collidable(false).luminance(1).breakInstantly()));
     public static final Block PAMPAS_GRASS = registerBlock("pampas_grass",
             new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.GRASS).nonOpaque().breakInstantly()));
+    public static final Block PURPLE_WILDFLOWERS = registerBlock("purple_wildflowers",
+            new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).nonOpaque().collidable(false).breakInstantly()));
+    public static final Block PINK_WILDFLOWERS = registerBlock("pink_wildflowers",
+            new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).nonOpaque().collidable(false).breakInstantly()));
+    public static final Block BLUE_WILDFLOWERS = registerBlock("blue_wildflowers",
+            new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).nonOpaque().collidable(false).breakInstantly()));
     public static final Block TOGGLE_LAMP = registerBlock("toggle_lamp",
             new ToggleableLampBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(ModBlocks.createLightLevelFromLitBlockState(15))));
     public static final Block TOGGLE_LAMP_RED = registerBlock("toggle_lamp_red",
             new ToggleableLampBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(ModBlocks.createLightLevelFromLitBlockState(8))));
     public static final Block JUICER = registerBlock("juicer", new JuicerBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block SCORCHED_SAND = registerBlock("scorched_sand",
+            new SandBlock(11098145,FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_ORANGE).
+                    instrument(Instrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);

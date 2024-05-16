@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PORCELAIN_TILES);
+        blockStateModelGenerator.registerRotatable(ModBlocks.SCORCHED_SAND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TOGGLE_LAMP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TOGGLE_LAMP_RED);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THINGIMIBOB);
@@ -36,6 +37,9 @@ public class ModModelProvider extends FabricModelProvider {
                 TextureMap::frontTopSide);
 
         registerPampasGrass(blockStateModelGenerator);
+        blockStateModelGenerator.registerFlowerbed(ModBlocks.PURPLE_WILDFLOWERS);
+        blockStateModelGenerator.registerFlowerbed(ModBlocks.PINK_WILDFLOWERS);
+        blockStateModelGenerator.registerFlowerbed(ModBlocks.BLUE_WILDFLOWERS);
     }
 
     @Override
