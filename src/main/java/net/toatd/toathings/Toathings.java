@@ -8,6 +8,7 @@ import net.toatd.toathings.recipe.ModRecipes;
 import net.toatd.toathings.item.ModItemGroups;
 import net.toatd.toathings.item.ModItems;
 import net.toatd.toathings.screen.ModScreenHandlers;
+import net.toatd.toathings.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,5 +32,6 @@ public class Toathings implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandler();
 		ModRecipes.registerModRecipes();
+		ModWorldGeneration.generateModWorldGeneration();
 	}
 }

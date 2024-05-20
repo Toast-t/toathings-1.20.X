@@ -1,9 +1,9 @@
 {
 	"required": true,
 	"package": "net.toatd.toathings.mixin",
-	"compatibilityLevel": "JAVA_21",
+	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"TreeConfiguredFeaturesMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
