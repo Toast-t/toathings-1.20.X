@@ -5,7 +5,7 @@
       "type": "minecraft:matching_blocks",
       "blocks": "minecraft:air"
     },
-    "direction": "north",
+    "direction": "west",
     "layers": [
       {
         "height": {

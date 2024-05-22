@@ -1,9 +1,9 @@
 {
-  "feature": "toathings:fallen_birch",
+  "feature": "toathings:fallen_birch_west",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 1
+      "chance": 20
     },
     {
       "type": "minecraft:in_square"

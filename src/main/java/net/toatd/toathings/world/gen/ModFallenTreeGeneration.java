@@ -9,7 +9,13 @@ import net.toatd.toathings.world.ModPlacedFeatures;
 public class ModFallenTreeGeneration {
     public static void generateFallenTrees() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
-                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.FALLEN_BIRCH_PLACED_KEY);
+                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.FALLEN_BIRCH_NORTH_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
+                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.FALLEN_BIRCH_WEST_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
+                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.FALLEN_BIRCH_NORTH_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
+                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.FALLEN_BIRCH_WEST_PLACED_KEY);
     }
 }
 

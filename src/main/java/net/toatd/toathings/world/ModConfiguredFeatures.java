@@ -23,6 +23,7 @@ import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.toatd.toathings.Toathings;
 import net.toatd.toathings.block.ModBlocks;
+import net.toatd.toathings.block.custom.HollowLogBlock;
 import net.toatd.toathings.world.gen.treedecorator.PolyporeTreeDecorator;
 
 import java.util.Collections;
@@ -31,16 +32,23 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> PAMPAS_GRASS_KEY = registerKey("pampas_grass");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILDFLOWERS_KEY = registerKey("wildflowers");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_BIRCH_KEY = registerKey("fallen_birch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_BIRCH_NORTH_KEY = registerKey("fallen_birch_north");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_BIRCH_WEST_KEY = registerKey("fallen_birch_west");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIRCH_MUSHROOM_CONFIG_KEY = registerKey("birch_mushroom_config");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIRCH_MUSHROOM_KEY = registerKey("birch_mushroom");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, FALLEN_BIRCH_KEY, Feature.BLOCK_COLUMN, new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.
-                        createLayer(BiasedToBottomIntProvider.create(3, 5), BlockStateProvider.of(ModBlocks.BIRCH_LOG_HOLLOW))),
+        register(context, FALLEN_BIRCH_NORTH_KEY, Feature.BLOCK_COLUMN, new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.
+                        createLayer(BiasedToBottomIntProvider.create(3, 5),
+                                BlockStateProvider.of(ModBlocks.BIRCH_LOG_HOLLOW.getDefaultState().with(HollowLogBlock.FACING, Direction.EAST)))),
                         Direction.NORTH, BlockPredicate.IS_AIR,false));
+
+        register(context, FALLEN_BIRCH_WEST_KEY, Feature.BLOCK_COLUMN, new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.
+                createLayer(BiasedToBottomIntProvider.create(3, 5),
+                        BlockStateProvider.of(ModBlocks.BIRCH_LOG_HOLLOW.getDefaultState().with(HollowLogBlock.FACING, Direction.NORTH)))),
+                Direction.WEST, BlockPredicate.IS_AIR,false));
 
         //PLANT
         register(context, PAMPAS_GRASS_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(20,6,2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,

@@ -17,7 +17,8 @@ import java.util.List;
 public class ModPlacedFeatures {
 public static final RegistryKey<PlacedFeature> PAMPAS_GRASS_PLACED_KEY = registerKey("pampas_grass_placed");
 public static final RegistryKey<PlacedFeature> WILDFLOWERS_KEY = registerKey("wilflowers_placed");
-public static final RegistryKey<PlacedFeature> FALLEN_BIRCH_PLACED_KEY = registerKey("fallen_birch_placed");
+public static final RegistryKey<PlacedFeature> FALLEN_BIRCH_NORTH_PLACED_KEY = registerKey("fallen_birch_north_placed");
+public static final RegistryKey<PlacedFeature> FALLEN_BIRCH_WEST_PLACED_KEY = registerKey("fallen_birch_west_placed");
 public static final RegistryKey<PlacedFeature> BIRCH_MUSHROOM_PLACED_KEY = registerKey("birch_mushroom_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -28,8 +29,10 @@ public static final RegistryKey<PlacedFeature> BIRCH_MUSHROOM_PLACED_KEY = regis
         register(context, WILDFLOWERS_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILDFLOWERS_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 CountPlacementModifier.of(ClampedIntProvider.create(UniformIntProvider.create(1, 3), 1, 2)), BiomePlacementModifier.of());
-        register(context, FALLEN_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_BIRCH_KEY),
-                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, FALLEN_BIRCH_NORTH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_BIRCH_NORTH_KEY),
+                RarityFilterPlacementModifier.of(20), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, FALLEN_BIRCH_WEST_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_BIRCH_WEST_KEY),
+                RarityFilterPlacementModifier.of(20), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, BIRCH_MUSHROOM_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BIRCH_MUSHROOM_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.2f, 2),
                         Blocks.BIRCH_SAPLING));

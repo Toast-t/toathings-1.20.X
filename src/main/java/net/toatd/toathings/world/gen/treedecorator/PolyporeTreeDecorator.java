@@ -42,7 +42,7 @@ public class PolyporeTreeDecorator extends TreeDecorator {
                 Direction direction2;
                 BlockPos blockPos;
                 if (!(random.nextFloat() <= 0.25f) || !generator.isAir(blockPos = pos.add((direction2 = direction).getOffsetX(), 0, direction2.getOffsetZ()))) continue;
-                generator.replace(blockPos, (BlockState)((BlockState)ModBlocks.RESINOUS_POLYPORE.getDefaultState().with(WallPlantBlock.FACING, direction)));
+                generator.replace(blockPos, ModBlocks.RESINOUS_POLYPORE.getDefaultState().with(WallPlantBlock.FACING, direction));
             }
         });
     }
