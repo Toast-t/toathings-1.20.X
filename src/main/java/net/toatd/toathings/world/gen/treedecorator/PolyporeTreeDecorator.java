@@ -1,6 +1,7 @@
 package net.toatd.toathings.world.gen.treedecorator;
 
 import com.mojang.serialization.Codec;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CocoaBlock;
@@ -9,48 +10,40 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
+import net.toatd.toathings.Toathings;
 import net.toatd.toathings.block.ModBlocks;
 import net.toatd.toathings.block.custom.WallPlantBlock;
-
-import java.util.Iterator;
-import java.util.List;
+import net.toatd.toathings.world.gen.ModTreeGeneration;
 
 public class PolyporeTreeDecorator extends TreeDecorator {
-    public static final Codec<PolyporeTreeDecorator> CODEC = Codec.floatRange(0.0F, 1.0F).fieldOf("probability").xmap(PolyporeTreeDecorator::new, (decorator) -> {
-        return decorator.probability;
-    }).codec();
-    private final float probability;
+    public static final PolyporeTreeDecorator INSTANCE = new PolyporeTreeDecorator();
+    public static final Codec<PolyporeTreeDecorator> CODEC = Codec.unit(() -> INSTANCE);
 
-    public PolyporeTreeDecorator(float probability) {
-        this.probability = probability;
+    public PolyporeTreeDecorator() {
+
     }
 
+    @Override
     protected TreeDecoratorType<?> getType() {
-        return TreeDecoratorType.COCOA;
+        return Toathings.POLYPORE_TREE_DECORATOR;
     }
 
-    public void generate(TreeDecorator.Generator generator) {
+    @Override
+    public void generate(Generator generator) {
         Random random = generator.getRandom();
-        if (!(random.nextFloat() >= this.probability)) {
-            List<BlockPos> list = generator.getLogPositions();
-            int i = ((BlockPos)list.get(0)).getY();
-            list.stream().filter((pos) -> {
-                return pos.getY() - i <= 2;
-            }).forEach((pos) -> {
-                Iterator var3 = Direction.Type.HORIZONTAL.iterator();
 
-                while(var3.hasNext()) {
-                    Direction direction = (Direction)var3.next();
-                    if (random.nextFloat() <= 0.25F) {
-                        Direction direction2 = direction.getOpposite();
-                        BlockPos blockPos = pos.add(direction2.getOffsetX(), 0, direction2.getOffsetZ());
-                        if (generator.isAir(blockPos)) {
-                            generator.replace(blockPos, (BlockState)((BlockState) ModBlocks.RESINOUS_POLYPORE.getDefaultState()).with(WallPlantBlock.FACING, direction));
-                        }
-                    }
-                }
+        ObjectArrayList<BlockPos> list = generator.getLogPositions();
+        int i = ((BlockPos)list.get(0)).getY();
 
-            });
-        }
+        // Pick a value from 0 (inclusive) to 4 (exclusive) and if it's 0, continue
+        // This is the chance for spawning the gold block
+        list.stream().filter(pos -> pos.getY() - i <= 5).forEach(pos -> {
+            for (Direction direction : Direction.Type.HORIZONTAL) {
+                Direction direction2;
+                BlockPos blockPos;
+                if (!(random.nextFloat() <= 0.25f) || !generator.isAir(blockPos = pos.add((direction2 = direction).getOffsetX(), 0, direction2.getOffsetZ()))) continue;
+                generator.replace(blockPos, (BlockState)((BlockState)ModBlocks.RESINOUS_POLYPORE.getDefaultState().with(WallPlantBlock.FACING, direction)));
+            }
+        });
     }
 }

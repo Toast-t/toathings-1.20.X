@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "toathings:birch_mushroom_config",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "toathings:birch_mushroom_config",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

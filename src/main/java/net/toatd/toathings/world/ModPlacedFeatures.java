@@ -1,5 +1,6 @@
 package net.toatd.toathings.world;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -17,6 +18,7 @@ public class ModPlacedFeatures {
 public static final RegistryKey<PlacedFeature> PAMPAS_GRASS_PLACED_KEY = registerKey("pampas_grass_placed");
 public static final RegistryKey<PlacedFeature> WILDFLOWERS_KEY = registerKey("wilflowers_placed");
 public static final RegistryKey<PlacedFeature> FALLEN_BIRCH_PLACED_KEY = registerKey("fallen_birch_placed");
+public static final RegistryKey<PlacedFeature> BIRCH_MUSHROOM_PLACED_KEY = registerKey("birch_mushroom_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -28,6 +30,9 @@ public static final RegistryKey<PlacedFeature> FALLEN_BIRCH_PLACED_KEY = registe
                 CountPlacementModifier.of(ClampedIntProvider.create(UniformIntProvider.create(1, 3), 1, 2)), BiomePlacementModifier.of());
         register(context, FALLEN_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FALLEN_BIRCH_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, BIRCH_MUSHROOM_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BIRCH_MUSHROOM_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.2f, 2),
+                        Blocks.BIRCH_SAPLING));
     }
 
 

@@ -2,13 +2,16 @@ package net.toatd.toathings;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.toatd.toathings.block.ModBlocks;
 import net.toatd.toathings.block.entity.ModBlockEntities;
+import net.toatd.toathings.mixin.TreeDecoratorTypeInvoker;
 import net.toatd.toathings.recipe.ModRecipes;
 import net.toatd.toathings.item.ModItemGroups;
 import net.toatd.toathings.item.ModItems;
 import net.toatd.toathings.screen.ModScreenHandlers;
 import net.toatd.toathings.world.gen.ModWorldGeneration;
+import net.toatd.toathings.world.gen.treedecorator.PolyporeTreeDecorator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +22,8 @@ public class Toathings implements ModInitializer {
 
 	public static final String MOD_ID = "toathings";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static final TreeDecoratorType<PolyporeTreeDecorator> POLYPORE_TREE_DECORATOR = TreeDecoratorTypeInvoker.callRegister("toathings:polypore_tree_decorator", PolyporeTreeDecorator.CODEC);
 
 	@Override
 	public void onInitialize() {

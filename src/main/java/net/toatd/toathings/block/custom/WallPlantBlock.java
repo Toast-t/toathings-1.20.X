@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -16,6 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
@@ -30,11 +32,6 @@ public class WallPlantBlock extends Block {
         super(settings);
     }
 
-    private boolean canPlaceOn(BlockView world, BlockPos pos, Direction side) {
-        BlockState blockState = world.getBlockState(pos);
-        return blockState.isSideSolidFullSquare(world, pos, side);
-    }
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return FACING_TO_SHAPE.get(state.get(FACING));
@@ -42,8 +39,8 @@ public class WallPlantBlock extends Block {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        Direction direction = state.get(FACING);
-        return this.canPlaceOn(world, pos.offset(direction.getOpposite()), direction);
+        BlockState blockState = world.getBlockState(pos.offset(state.get(FACING)));
+        return blockState.isIn(BlockTags.LOGS);
     }
 
     @Override
@@ -68,7 +65,14 @@ public class WallPlantBlock extends Block {
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        BlockState blockState = this.getDefaultState();
+        World worldView = ctx.getWorld();
+        BlockPos blockPos = ctx.getBlockPos();
+        for (Direction direction : ctx.getPlacementDirections()) {
+            if (!direction.getAxis().isHorizontal() || !(blockState = (BlockState)blockState.with(FACING, direction)).canPlaceAt(worldView, blockPos)) continue;
+            return blockState;
+        }
+        return null;
     }
 
     @Override
